@@ -42,11 +42,13 @@ const destinationCardsContainer = document.querySelector("#destination-cards-con
     })
     .then(function(countries) {
       countries.forEach(function(country) {
+        const countryName = country.name
+        const countryFlag = country.flags
         const destinationCard = document.createElement("div");
         destinationCard.classList.add("destination-card");
         destinationCard.innerHTML = `
-          <img src="${country.flag}" alt="${country.name}">
-          <h3 class="destination-name">${country.name}</h3>
+          <img src="${countryFlag.png}" alt="${countryName}">
+          <h3 class="destination-name">${countryName.common}</h3>
           <p class="destination-description">${country.capital}</p>
           <a href="#" class="btn btn-primary">Learn More</a>
         `;
