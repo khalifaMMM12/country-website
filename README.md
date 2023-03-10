@@ -1,2 +1,2 @@
 # country-website
-a simple travel website with rest API
+a simple country website with rest API
